@@ -22,7 +22,7 @@ public interface ClientService
      * @param id The primary key (long) of the client you seek.
      * @return The given client or throws an exception if not found.
      */
-    Client findStudentById(long id);
+    Client findClientById(long id);
 
     /**
      * Deletes the client record and its client and course combinations from the database based off of the provided primary key
@@ -32,7 +32,7 @@ public interface ClientService
     void delete(long id);
 
     /**
-     * Given a complete student object, saves that student object in the database.
+     * Given a complete client object, saves that student object in the database.
      * If a primary key is provided, the record is completely replaced
      * If no primary key is provided, one is automatically generated and the record is added to the database.
      *

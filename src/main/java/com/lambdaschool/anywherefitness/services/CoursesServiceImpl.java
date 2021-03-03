@@ -93,10 +93,10 @@ public class CoursesServiceImpl
 
         newCourse.getClientCourses()
                 .clear();
-        for (ClientCourses sc : course.getClientCourses())
+        for (ClientCourses cc : course.getClientCourses())
         {
-            Client newClient = clientrepos.findById(sc.getClient().getClientid())
-                    .orElseThrow(() -> new EntityNotFoundException("Instructor id " + sc.getClient()
+            Client newClient = clientrepos.findById(cc.getClient().getClientid())
+                    .orElseThrow(() -> new EntityNotFoundException("Instructor id " + cc.getClient()
                             .getClientid() + " not found!"));
 
             newCourse.getClientCourses()

@@ -74,6 +74,14 @@ public class Client
         this.clientid = clientid;
     }
 
+    public String getPrimaryemail() {
+        return primaryemail;
+    }
+
+    public void setPrimaryemail(String primaryemail) {
+        this.primaryemail = primaryemail;
+    }
+
     /**
      * Getter for the password
      *
