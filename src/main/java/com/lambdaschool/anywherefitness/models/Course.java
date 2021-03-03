@@ -43,7 +43,7 @@ public class Course
     private Instructor instructor;
 
     /**
-     * Part of the join relationship between course and students
+     * Part of the join relationship between course and client
      * connects course to a course student combination
      */
     @OneToMany(mappedBy = "course",
@@ -51,7 +51,7 @@ public class Course
             orphanRemoval = true)
     @JsonIgnoreProperties(value = "course",
             allowSetters = true)
-    private Set<ClientCourses> students = new HashSet<>();
+    private Set<ClientCourses> clients = new HashSet<>();
 
     /**
      * Getter for primary key of this course
@@ -98,19 +98,19 @@ public class Course
      *
      * @return A list of course student combinations for this course
      */
-    public Set<StudCourses> getStudents()
+    public Set<ClientCourses> getStudents()
     {
-        return students;
+        return clients;
     }
 
     /**
      * Setter for the course student combinations for this course
      *
-     * @param students A new list of course student combinations associated with course
+     * @param clients A new list of course student combinations associated with course
      */
-    public void setStudents(Set<StudCourses> students)
+    public void setClients(Set<ClientCourses> clients)
     {
-        this.students = students;
+        this.clients = clients;
     }
 
     /**
