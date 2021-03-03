@@ -28,6 +28,10 @@ public class Course
     @Column(nullable = true,
             unique = true)
     private String coursename;
+    private String coursestart;
+    private int courselimit;
+    private String intensity;
+    private String location;
 
     /**
      * The instructor object (Instructor) of this course
@@ -93,22 +97,54 @@ public class Course
         this.coursename = coursename;
     }
 
+    public int getCourselimit() {
+        return courselimit;
+    }
+
+    public void setCourselimit(int courselimit) {
+        this.courselimit = courselimit;
+    }
+
+    public String getCoursestart() {
+        return coursestart;
+    }
+
+    public void setCoursestart(String coursestart) {
+        this.coursestart = coursestart;
+    }
+
+    public String getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(String intensity) {
+        this.intensity = intensity;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     /**
-     * Getter for the course student combinations for this course
+     * Getter for the course client combinations for this course
      *
-     * @return A list of course student combinations for this course
+     * @return A list of course client combinations for this course
      */
-    public Set<ClientCourses> getStudents()
+    public Set<ClientCourses> getClientCourses()
     {
         return clients;
     }
 
     /**
-     * Setter for the course student combinations for this course
+     * Setter for the course client combinations for this course
      *
-     * @param clients A new list of course student combinations associated with course
+     * @param clients A new list of course client combinations associated with course
      */
-    public void setClients(Set<ClientCourses> clients)
+    public void setClientCourses(Set<ClientCourses> clients)
     {
         this.clients = clients;
     }
