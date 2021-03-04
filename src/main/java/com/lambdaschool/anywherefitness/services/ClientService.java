@@ -31,6 +31,8 @@ public interface ClientService
      */
     void delete(long id);
 
+    void deleteAll();
+
     /**
      * Given a complete client object, saves that client object in the database.
      * If a primary key is provided, the record is completely replaced

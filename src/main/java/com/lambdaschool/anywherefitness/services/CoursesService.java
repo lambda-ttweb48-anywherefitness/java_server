@@ -31,6 +31,8 @@ public interface CoursesService
      */
     void delete(long id);
 
+    void deleteAll();
+
     /**
      * Given a complete course object, saves that course object in the database.
      * If a primary key is provided, the record is completely replaced

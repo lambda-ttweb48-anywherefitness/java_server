@@ -31,6 +31,13 @@ public class Instructor
      */
     @Column(nullable = false,
             unique = true)
+    private String username;
+
+    /**
+     * The email (Email). Cannot be null and must be unique
+     */
+    @Column(nullable = false,
+            unique = true)
     @Email
     private String primaryemail;
 
@@ -65,9 +72,12 @@ public class Instructor
      * @param primaryemail The primaryemail (String) for the new instructor
      */
     public Instructor(
+            String username,
             String primaryemail,
             String password)
     {
+        this.username = username;
+        this.primaryemail = primaryemail;
         setPassword(password);
     }
 
@@ -89,6 +99,14 @@ public class Instructor
     public void setInstructorid(long instructorid)
     {
         this.instructorid = instructorid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**

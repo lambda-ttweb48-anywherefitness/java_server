@@ -106,4 +106,9 @@ public class CoursesServiceImpl
 
         return courserepos.save(newCourse);
     }
+
+    @Override
+    public void deleteAll(){
+        courserepos.deleteAll();
+    }
 }

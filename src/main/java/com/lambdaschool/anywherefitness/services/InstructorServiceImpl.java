@@ -83,4 +83,9 @@ public class InstructorServiceImpl
 
         return instructorrepos.save(newInstructor);
     }
+
+    @Override
+    public void deleteAll(){
+        instructorrepos.deleteAll();
+    }
 }

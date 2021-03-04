@@ -92,4 +92,9 @@ public class ClientServiceImpl
 
             return clientrepos.save(newClient);
         }
+
+    @Override
+    public void deleteAll(){
+        clientrepos.deleteAll();
+    }
 }

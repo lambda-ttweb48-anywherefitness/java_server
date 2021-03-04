@@ -31,6 +31,8 @@ public interface InstructorService
      */
     void delete(long id);
 
+    void deleteAll();
+
     /**
      * Given a complete instructor object, saves that object in the database.
      * If a primary key is provided, the record is completely replaced

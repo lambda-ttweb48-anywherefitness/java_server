@@ -24,6 +24,10 @@ public class Client
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long clientid;
 
+    @Column(nullable = false,
+            unique = true)
+    private String username;
+
     /**
      * The username (String). Cannot be null and must be unique
      */
@@ -56,6 +60,16 @@ public class Client
     {
     }
 
+    public Client(
+            String username,
+            String primaryemail,
+            String password)
+    {
+        this.username = username;
+        this.primaryemail = primaryemail;
+        setPassword(password);
+    }
+
     /**
      * Getter for the Client Id
      *
@@ -72,6 +86,14 @@ public class Client
      */
     public void setClientid(long clientid) {
         this.clientid = clientid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPrimaryemail() {
