@@ -2,6 +2,7 @@ package com.lambdaschool.anywherefitness.services;
 
 import com.lambdaschool.anywherefitness.models.Client;
 
+import javax.validation.constraints.Email;
 import java.util.List;
 
 /**
@@ -23,6 +24,8 @@ public interface ClientService
      * @return The given client or throws an exception if not found.
      */
     Client findClientById(long id);
+
+    Client findClientByEmail(Email email);
 
     /**
      * Deletes the client record and its client and course combinations from the database based off of the provided primary key

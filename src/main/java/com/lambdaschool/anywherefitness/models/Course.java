@@ -29,6 +29,7 @@ public class Course
             unique = true)
     private String coursename;
     private String coursestart;
+    private String duration;
     private int courselimit;
     private String intensity;
     private String location;
@@ -119,6 +120,14 @@ public class Course
 
     public void setIntensity(String intensity) {
         this.intensity = intensity;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public String getLocation() {

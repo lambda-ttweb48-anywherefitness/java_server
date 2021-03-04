@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,5 +97,19 @@ public class ClientServiceImpl
     @Override
     public void deleteAll(){
         clientrepos.deleteAll();
+    }
+
+    @Override
+    public Client findClientByEmail(Email email)
+    {
+        Client ce = clientrepos.findByEmailIgnoreCase(email);
+
+        if (ce != null)
+        {
+            return ce;
+        } else
+        {
+            throw new ResourceNotFoundException("Client unavailable. This resource might have been moved or deleted.");
+        }
     }
 }

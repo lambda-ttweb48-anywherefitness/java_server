@@ -2,6 +2,7 @@ package com.lambdaschool.anywherefitness.services;
 
 import com.lambdaschool.anywherefitness.models.Instructor;
 
+import javax.validation.constraints.Email;
 import java.util.List;
 
 /**
@@ -23,6 +24,8 @@ public interface InstructorService
      * @return The given instructor or throws an exception if not found.
      */
     Instructor findInstructorById(long id);
+
+    Instructor findInstructorByEmail(Email email);
 
     /**
      * Deletes the instructor record and its course combinations from the database based off of the provided primary key

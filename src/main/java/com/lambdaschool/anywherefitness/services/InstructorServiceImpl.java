@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,5 +88,19 @@ public class InstructorServiceImpl
     @Override
     public void deleteAll(){
         instructorrepos.deleteAll();
+    }
+
+    @Override
+    public Instructor findInstructorByEmail(Email email)
+    {
+        Instructor ie = instructorrepos.findByEmailIgnoreCase(email);
+
+        if (ie != null)
+        {
+            return ie;
+        } else
+        {
+            throw new ResourceNotFoundException("Client unavailable. This resource might have been moved or deleted.");
+        }
     }
 }
