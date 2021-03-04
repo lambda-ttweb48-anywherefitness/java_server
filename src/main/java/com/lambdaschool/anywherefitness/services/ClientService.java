@@ -32,7 +32,7 @@ public interface ClientService
     void delete(long id);
 
     /**
-     * Given a complete client object, saves that student object in the database.
+     * Given a complete client object, saves that client object in the database.
      * If a primary key is provided, the record is completely replaced
      * If no primary key is provided, one is automatically generated and the record is added to the database.
      *
