@@ -9,4 +9,5 @@ public interface ClientRepository
     extends CrudRepository<Client, Long>
 {
     Client findByEmailIgnoreCase(Email email);
+    Client findByUsername(String username);
 }

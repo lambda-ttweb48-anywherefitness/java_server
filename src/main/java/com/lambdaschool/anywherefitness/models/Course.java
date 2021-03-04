@@ -40,7 +40,7 @@ public class Course
      * Forms a Many to one relationship between course and instructor.
      * An instructor has many courses!
      */
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "instructorid",
             nullable = false)
     @JsonIgnoreProperties(value = "courses",

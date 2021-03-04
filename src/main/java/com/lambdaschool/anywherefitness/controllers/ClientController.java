@@ -1,8 +1,6 @@
 package com.lambdaschool.anywherefitness.controllers;
 
 import com.lambdaschool.anywherefitness.models.Client;
-import com.lambdaschool.anywherefitness.models.ClientCourses;
-import com.lambdaschool.anywherefitness.repositories.ClientRepository;
 import com.lambdaschool.anywherefitness.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
