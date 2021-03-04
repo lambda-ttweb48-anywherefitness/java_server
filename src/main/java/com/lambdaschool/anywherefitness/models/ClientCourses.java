@@ -87,7 +87,7 @@ public class ClientCourses
      *
      * @param client change the student object associated with this course student combination to this one.
      */
-    public void setStudent(Client client)
+    public void setClient(Client client)
     {
         this.client = client;
     }
